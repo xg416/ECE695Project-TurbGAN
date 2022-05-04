@@ -6,7 +6,7 @@ import torch.optim as optim
 from PIL import Image
 import numpy as np
 from losses import WGAN_loss
-from p2s.simulator import Simulator
+from P2S.simulator import Simulator
 import random
 
 class Generator(nn.Module):
