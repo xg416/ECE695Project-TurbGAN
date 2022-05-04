@@ -1,5 +1,4 @@
 import sys
-sys.path.insert(0, '/home/zhan3275/.local/lib/python3.8/site-packages')
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
