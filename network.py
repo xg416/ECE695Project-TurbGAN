@@ -132,13 +132,13 @@ class TurbGAN(nn.Module):
         # print(step, '2')
         # GPUtil.showUtilization()
         # update D
-        if not (step > 280000 and step % 6 ==0):
+        if not (step > 10000 and step % 6 ==0):
             self.set_requires_grad(self.model_D, True)
             self.optimizer_D.zero_grad()
             self.backward_D()
             self.optimizer_D.step()
         # update G
-        if step > 280000 and step % 6 == 0:
+        if step > 10000 and step % 6 == 0:
             self.set_requires_grad(self.model_D, False)
             self.optimizer_G.zero_grad()
             self.backward_G()
